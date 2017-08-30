@@ -12,3 +12,4 @@ c:\users\diego diaz\documents\visual studio 2017\Projects\wavesAudio\wavesAudio\
 c:\users\diego diaz\documents\visual studio 2017\Projects\wavesAudio\wavesAudio\obj\Debug\wavesAudio.csproj.GenerateResource.Cache
 c:\users\diego diaz\documents\visual studio 2017\Projects\wavesAudio\wavesAudio\obj\Debug\wavesAudio.exe
 c:\users\diego diaz\documents\visual studio 2017\Projects\wavesAudio\wavesAudio\obj\Debug\wavesAudio.pdb
+C:\Users\Diego Diaz\documents\visual studio 2017\Projects\wavesAudio\wavesAudio\obj\Debug\wavesAudio.csproj.CoreCompileInputs.cache

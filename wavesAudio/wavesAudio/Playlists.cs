@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace wavesAudio
 {
-    class Playlists<T>
+    class Playlists
     {
-        Dictionary<T, List<Songs>> newPlaylistsDictionary = new Dictionary<T, List<Songs>>();
+        public List<Songs> newPlaylist = new List<Songs>();
+        public int songCount { get; set; }
+        public string name { get; set; }
     }
 }

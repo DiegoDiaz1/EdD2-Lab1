@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,7 +44,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.media = new AxWMPLib.AxWindowsMediaPlayer();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,12 +63,14 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.media)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +89,12 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Black;
+            this.tabPage1.Controls.Add(this.button7);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.comboBox3);
+            this.tabPage1.Controls.Add(this.comboBox2);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.trackBar1);
             this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.pictureBox1);
@@ -87,23 +109,78 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Media";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(440, 367);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(149, 25);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Select a Playlist";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(8, 364);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(412, 32);
+            this.comboBox3.TabIndex = 10;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Song Name",
+            "Duration"});
+            this.comboBox2.Location = new System.Drawing.Point(8, 838);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(181, 32);
+            this.comboBox2.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(3, 810);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 25);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Sort By:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Ascending",
+            "Descending"});
+            this.comboBox1.Location = new System.Drawing.Point(195, 838);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(181, 32);
+            this.comboBox1.TabIndex = 7;
+            // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(678, 888);
+            this.trackBar1.Location = new System.Drawing.Point(445, 888);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(333, 80);
+            this.trackBar1.Size = new System.Drawing.Size(566, 80);
             this.trackBar1.TabIndex = 6;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 24;
-            this.listBox1.Location = new System.Drawing.Point(6, 333);
+            this.listBox1.Location = new System.Drawing.Point(6, 429);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(1005, 410);
+            this.listBox1.Size = new System.Drawing.Size(1005, 314);
             this.listBox1.TabIndex = 5;
             this.listBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseClick);
             // 
@@ -119,7 +196,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(824, 810);
+            this.button3.Location = new System.Drawing.Point(725, 817);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 72);
             this.button3.TabIndex = 3;
@@ -129,7 +206,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(905, 810);
+            this.button2.Location = new System.Drawing.Point(864, 817);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 72);
             this.button2.TabIndex = 2;
@@ -139,7 +216,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(738, 810);
+            this.button1.Location = new System.Drawing.Point(566, 817);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 72);
             this.button1.TabIndex = 1;
@@ -150,15 +227,21 @@
             // media
             // 
             this.media.Enabled = true;
-            this.media.Location = new System.Drawing.Point(8, 751);
+            this.media.Location = new System.Drawing.Point(8, 944);
             this.media.Name = "media";
             this.media.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("media.OcxState")));
-            this.media.Size = new System.Drawing.Size(664, 217);
+            this.media.Size = new System.Drawing.Size(23, 24);
             this.media.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Black;
+            this.tabPage2.Controls.Add(this.listBox4);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.textBox5);
+            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.listBox3);
+            this.tabPage2.Controls.Add(this.listBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -166,9 +249,64 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Playlist";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(584, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(181, 25);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Create New Playlist";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(509, 94);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(316, 29);
+            this.textBox5.TabIndex = 3;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(831, 86);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(180, 47);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "Create";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // listBox3
+            // 
+            this.listBox3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 24;
+            this.listBox3.Location = new System.Drawing.Point(405, 566);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(606, 386);
+            this.listBox3.TabIndex = 1;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
+            this.listBox3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox3_MouseDoubleClick);
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 24;
+            this.listBox2.Location = new System.Drawing.Point(7, 86);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(392, 866);
+            this.listBox2.TabIndex = 0;
+            this.listBox2.Click += new System.EventHandler(this.listBox2_Click);
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Black;
+            this.tabPage3.Controls.Add(this.textBox6);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.button5);
             this.tabPage3.Controls.Add(this.pictureBox2);
             this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.label4);
@@ -185,6 +323,43 @@
             this.tabPage3.Size = new System.Drawing.Size(1019, 983);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Add Songs";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(182, 197);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(152, 29);
+            this.textBox6.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(158, 197);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 25);
+            this.label8.TabIndex = 11;
+            this.label8.Text = ":";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(551, 196);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(327, 50);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Add Song";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 436);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1027, 278);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // button4
             // 
@@ -247,7 +422,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(8, 196);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(326, 29);
+            this.textBox3.Size = new System.Drawing.Size(144, 29);
             this.textBox3.TabIndex = 2;
             // 
             // textBox2
@@ -264,15 +439,26 @@
             this.textBox1.Size = new System.Drawing.Size(326, 29);
             this.textBox1.TabIndex = 0;
             // 
-            // pictureBox2
+            // listBox4
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-4, 436);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1027, 278);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.listBox4.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 24;
+            this.listBox4.Location = new System.Drawing.Point(405, 174);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(606, 386);
+            this.listBox4.TabIndex = 5;
+            this.listBox4.DoubleClick += new System.EventHandler(this.listBox4_DoubleClick);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(89, 923);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(287, 37);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "Play";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -280,6 +466,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1027, 1011);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -289,6 +476,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.media)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -319,6 +508,21 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.Button button7;
     }
 }
 
